@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ludum Elite Studio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/chunq" rel="stylesheet">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.10.2/lottie.min.js"></script>
+                
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="scripts/app.js"></script>
+    <script src="scripts/team.js"></script>
+    <script src="scripts/slide.js"></script>
+    <script src="scripts/newsletter.js"></script>
+    <script src="scripts/btt.js"></script>
+</head>
+<body>
+    <div class="c-btt js-btt">
+        <a class="c-btt__link" href="#top">
+            <svg class="c-btt__svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M8 10a.5.5 0 0 0 .5-.5V3.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 3.707V9.5a.5.5 0 0 0 .5.5m-7 2.5a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13a.5.5 0 0 1-.5-.5"/>
+            </svg>
+        </a>
+    </div>
+
+    <header class="c-header c-header--home">
+        <nav class="c-nav c-nav--home navbar navbar-expand-lg">
+            <div class="c-nav__cntnt container">
+                <a class="c-nav__brand navbar-brand" href="#">
+                    <img class="c-nav__brand-img" src="./images/icons/logo-head.webp" alt="">
+
+                    <!-- <svg class="c-nav__brand-svg" id="Layer_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 272.5 261.4">
+                        <path class="c-nav__brand-path" d="M14.9,1.1c0-.1-.2-.2-.3,0-2.3,6.2-21.7,61.8,13,96.4,36.8,36.8,47.6,43.1,54.4,50.9h-25.9c-.3,0-.4.4-.2.6,4.3,3.1,24.3,17.6,34,26.2.5.5,1.2.7,2,.7h38.7c.6,0,1-.5.9-1.1-16.3-49.5-42.6-56-86.9-100.4C31.2,60.1,18.3,46.4,14.9,1.1Z"/>
+                        <path class="c-nav__brand-path" d="M3.9,97.9c-3.4,25.2-15,77.3,52.4,103,5.4,2.1,10.3,5.1,14.6,9,14.7,13.2,42.3,39.2,53.4,50.2s.8,0,.7-.4c-4.2-10.8-27.2-67-50-75.1-22.2-8-27.9-6.4-36.5-14.2s-3.7-5.1-3.7-8.3v-32.7c0-.4-.2-.8-.5-1-3-2-17.8-12.5-28.2-30.9s-2.1-.7-2.2.4Z"/>
+                        <path class="c-nav__brand-path" d="M257.6,1.3c0-.1.2-.2.3,0,2.3,6.2,21.7,61.8-13,96.4-36.8,36.8-47.6,43.1-54.4,50.9h25.9c.3,0,.4.4.2.6-4.3,3.1-24.3,17.6-34,26.2-.5.5-1.2.7-2,.7h-38.7c-.6,0-1-.5-.9-1.1,16.3-49.5,42.6-56,86.9-100.4,13.4-14.3,26.2-28.1,29.6-73.3Z"/>
+                        <path class="c-nav__brand-path" d="M268.6,98c3.4,25.2,15,77.3-52.4,103-5.4,2.1-10.3,5.1-14.6,9-14.7,13.2-42.3,39.2-53.4,50.2-.3.3-.8,0-.7-.4,4.2-10.8,27.2-67,50-75.1,22.2-8,27.9-6.4,36.5-14.2,2.3-2.1,3.7-5.1,3.7-8.3v-32.7c0-.4.2-.8.5-1,3-2,17.8-12.5,28.2-30.9.6-1,2.1-.7,2.2.4Z"/>
+                        <path class="c-nav__brand-path" d="M134.6,188.7h-19c-1.2,0-2,1.4-1.2,2.4,4.7,6.6,17.6,24.9,19.9,31.8.1.3.6.3.7,0,2.3-6.9,15.2-25.2,19.9-31.8s0-2.4-1.2-2.4h-19Z"/>
+                        <path class="c-nav__brand-path" d="M210.4,55.9c-3.5-2.3-31.4-22.2-75.8-21.9-44.4-.3-72.3,19.6-75.8,21.9-1.7,1.1-.9,4,0,4.9,1.5,1.4,23,18.2,39.8,29.9,35.4,24.8,28.7,30,34.8,34,.6.4.9.4,1.2.4s.6,0,1.2-.4c6.1-4-.6-9.2,34.8-34,16.8-11.8,38.3-28.5,39.8-29.9.9-.9,1.7-3.8,0-4.9Z"/>
+                        <path class="c-nav__brand-path" d="M134.6,125c0,0,.1,0,.2,0"/>
+                   
+                        <path class="c-nav__brand-path" d="M82,148.4h-25.9c-.3,0-.4.4-.2.6,4.3,3.1,24.3,17.6,34,26.2.5.5,1.2.7,2,.7h38.7c.6,0,1-.5.9-1.1-16.3-49.5-42.6-56-86.9-100.4C31.2,60.1,18.3,46.4,14.9,1.1c0-.1-.2-.2-.3,0-2.3,6.2-21.7,61.8,13,96.4,36.8,36.8,47.6,43.1,54.4,50.9Z"/>
+                        <path class="c-nav__brand-path" d="M75.1,184.5c-22.2-8-27.9-6.4-36.5-14.2-2.3-2.1-3.7-5.1-3.7-8.3v-32.7c0-.4-.2-.8-.5-1-3-2-17.8-12.5-28.2-30.9-.6-1-2.1-.7-2.2.4-3.4,25.2-15,77.3,52.4,103,5.4,2.1,10.3,5.1,14.6,9,14.7,13.2,42.3,39.2,53.4,50.2.3.3.8,0,.7-.4-4.2-10.8-27.2-67-50-75.1Z"/>
+                        <path class="c-nav__brand-path" d="M141.1,175c-.1.6.3,1.1.9,1.1h38.7c.7,0,1.4-.3,2-.7,9.7-8.6,29.7-23.1,34-26.2.3-.2.1-.6-.2-.6h-25.9c6.8-7.8,17.6-14.1,54.4-50.9,34.7-34.7,15.3-90.2,13-96.4,0-.1-.3-.1-.3,0-3.4,45.2-16.3,59-29.6,73.3-44.3,44.3-70.6,50.9-86.9,100.4Z"/>
+                        <path class="c-nav__brand-path" d="M268.6,98c-.2-1.1-1.6-1.4-2.2-.4-10.4,18.4-25.2,28.9-28.2,30.9-.3.2-.5.6-.5,1v32.7c0,3.2-1.4,6.2-3.7,8.3-8.6,7.8-14.3,6.3-36.5,14.2-22.8,8.1-45.7,64.3-50,75.1-.2.4.4.7.7.4,11.2-11,38.8-37,53.4-50.2,4.3-3.9,9.2-7,14.6-9,67.4-25.8,55.8-77.8,52.4-103Z"/>
+                        <path class="c-nav__brand-path" d="M153.6,188.7h-38c-1.2,0-2,1.4-1.2,2.4,4.7,6.6,17.6,24.9,19.9,31.8.1.3.6.3.7,0,2.3-6.9,15.2-25.2,19.9-31.8.7-1,0-2.4-1.2-2.4Z"/>
+                        <path class="c-nav__brand-path" d="M98.6,90.7c35.4,24.8,28.7,30,34.8,34,.6.4.9.4,1.2.4s.1,0,.2,0c0,0-.1,0-.2,0,.3,0,.6,0,1.2-.4,6.1-4-.6-9.2,34.8-34,16.8-11.8,38.3-28.5,39.8-29.9.9-.9,1.7-3.8,0-4.9-3.5-2.3-31.4-22.2-75.8-21.9-44.4-.3-72.3,19.6-75.8,21.9-1.7,1.1-.9,4,0,4.9,1.5,1.4,23,18.2,39.8,29.9Z"/>
+                    </svg> -->
+                </a>
+                <button class="c-nav__toggle navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="c-nav__toggle-icon navbar-toggler-icon"></span>
+                </button>
+                <div class="c-nav__collapse collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="c-nav__list navbar-nav">
+                        <a class="c-nav__link nav-link" href="#about">About Us</a>
+                        <a class="c-nav__link nav-link" href="#careers">Careers</a>
+                        <a class="c-nav__link nav-link" href="#project">Project</a>
+                        <a class="c-nav__link nav-link" href="contact.html">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div class="c-header__txt-cntnt">
+            <div class="c-header__cntnr container">
+                <div class="c-header__row row">
+                    <div class="c-header__col col-12">
+                        <div class="c-header__header">
+                            <h1 class="c-header__hdng">Ludum Elite</h1>
+                            <p class="c-header__subhdng">Studio</p>
+                        </div>
+                    </div>
+
+                    <div class="col-5">
+                        <div class="c-header__dt-txt-cntnr">
+                            <h2 class="c-header__dt-ttle">Drone<br>Tanks</h2>
+                            <p class="c-header__dt-prgrph">Survive hordes on a creative way you have never experienced before! And battle against challenging enemies which will craft the greatest warrior out of you.</p>
+                            <a class="c-header__dt-btn c-btn-prmry" href="https://dronetanks.com/index.html" target="_blank">Learn more
+                                <svg class="c-btn-prmry__svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="c-parallax">
+            <div class="c-parallax__layer js-p1"></div>
+            <div class="c-parallax__layer js-p2"></div>
+            <div class="c-parallax__layer js-p3"></div>
+            <div class="c-parallax__layer js-p4"></div>
+            <div class="c-parallax__layer js-p5"></div>
+            <div class="c-parallax__layer js-p6"></div>
+        </div>
+    </header>
+
+    <main>
+        <article class="c-about" id="about">
+            <div class="container">
+                <div class="c-about__row row">
+                    <div class="col-12">
+                        <h2 class="c-about__hdng">About Us</h2>
+                    </div>
+
+                    <div class="col-lg-5">
+                        <div class="c-about__ttl-cntnr">
+                            <p class="c-about__ttl">United <span class="c-about__ttl-ccnt">since 2025</span> as Ludum Elite. We are an <span class="c-about__ttl-ccnt">international team</span> - driven, and passionate about shaping the future of interactive experiences.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-7">
+                        <div class="c-about__crsl-cntnr">
+                            <div class="c-about__crsl-btn js-crls-btn" data-to="" data-flow="prev">
+                                <svg class="c-about__crsl-btn-icon" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                                    <path class="c-about__crsl-btn-path" fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0"/>
+                                </svg>
+                            </div>
+
+                            <div class="c-about__crsl-items js-crsl-items">
+                                <div class="c-about__crsl-item c-about__crsl-item--prev js-crsl-item js-crsl-prev">
+                                    <img class="c-about__crsl-img js-crsl-img-prev" src="" alt="">
+                                </div>
+                                <div class="c-about__crsl-item c-about__crsl-item--left js-crsl-item js-crsl-left" data-item="">
+                                    <img class="c-about__crsl-img js-crsl-img-left" src="" alt="">
+                                </div>
+                                <div class="c-about__crsl-item c-about__crsl-item--right js-crsl-item js-crsl-right" data-item="">
+                                    <img class="c-about__crsl-img js-crsl-img-right" src="" alt="">
+                                </div>
+                                <div class="c-about__crsl-item c-about__crsl-item--next js-crsl-item js-crsl-next">
+                                    <img class="c-about__crsl-img js-crsl-img-next" src="" alt="">
+                                </div>
+                            </div>
+
+                            <div class="c-about__crsl-btn js-crls-btn" data-to="" data-flow="next">
+                                <svg class="c-about__crsl-btn-icon" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="c-partner" data-aos="fade" data-aos-duration="500">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="c-partner__wrapper">
+                                <div class="c-partner__item c-partner__item--1"></div>
+                                <div class="c-partner__item c-partner__item--2"></div>
+                                <div class="c-partner__item c-partner__item--3"></div>
+                                <div class="c-partner__item c-partner__item--4"></div>
+                                <div class="c-partner__item c-partner__item--5"></div>
+                                <div class="c-partner__item c-partner__item--6"></div>
+                                <div class="c-partner__item c-partner__item--7"></div>
+                                <div class="c-partner__item c-partner__item--8"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <article class="c-team">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="c-team__hdng">Meet Our Team</h2>
+                    </div>
+                </div>
+
+                <div class="c-team__row row js-team">
+                    <!-- DYNAMIC - Team members -->
+                </div>
+
+                <div class="row">
+                    <div class="offset-2 col-8">
+                        <div class="c-team__txt-cntnr">
+                            <p class="c-team__prgrph">At Ludum Elite, every individual plays a vital role — we believe that the strength of our team lies in the unique talents and contributions of each member. Are you ready to shape the future with us?</p>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <article class="c-careers" id="careers">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <header class="c-careers__hdr">
+                            <h2 class="c-careers__hdng">Careers</h2>
+                            <div class="c-careers__wanted">
+                                <i class="c-careers__wanted-icon bi-fire"></i>
+                                <p class="c-careers__wanted-txt">= You are wanted!</p>
+                            </div>
+                        </header>
+                    </div>
+                </div>
+
+                <div class="c-careers__row row">
+                    <div class="col-6 col-md-4 col-xl-3" data-aos="fade-up" data-aos-duration="750">
+                        <a class="c-careers__card" href="contact.html?reason=programmer">
+                            <div class="c-careers__txt-cntnr">
+                                <h3 class="c-careers__ttl">Programmers</h3>
+                                <ul class="c-careers__list">
+                                    <li class="c-careers__list-item">C#</li>
+                                    <li class="c-careers__list-item">Unity</li>
+                                    <li class="c-careers__list-item">
+                                        C++
+                                        <i class="bi bi-fire"></i>
+                                    </li>
+                                    <li class="c-careers__list-item">JavaScript</li>
+                                    <li class="c-careers__list-item">Python</li>
+                                </ul>
+                            </div>
+
+                            <button class="c-careers__btn c-btn-scndry">Apply now</button>
+                        </a>
+                    </div>
+
+                    <div class="col-6 col-md-4 col-xl-3" data-aos="fade-up" data-aos-duration="750">
+                        <a class="c-careers__card c-careers__card--dsbld" href="contact.html?reason=designer">
+                            <div class="c-careers__txt-cntnr">
+                                <h3 class="c-careers__ttl">Designers</h3>
+                                <ul class="c-careers__list">
+                                    <li class="c-careers__list-item">Design</li>
+                                    <li class="c-careers__list-item">Level Design</li>
+                                    <li class="c-careers__list-item">Balancing</li>
+                                    <li class="c-careers__list-item">Mechanics</li>
+                                    <li class="c-careers__list-item">Prototyping</li>
+                                </ul>
+                            </div>
+
+                            <button class="c-careers__btn c-btn-scndry c-btn-scndry--dsbld">Apply now</button>
+                        </a>
+                    </div>
+
+                    <div class="col-6 col-md-4 col-xl-3" data-aos="fade-up" data-aos-duration="750">
+                        <a class="c-careers__card" href="contact.html?reason=artist">
+                            <div class="c-careers__txt-cntnr">
+                                <h3 class="c-careers__ttl">Artists</h3>
+                                <ul class="c-careers__list">
+                                    <li class="c-careers__list-item">2D Art</li>
+                                    <li class="c-careers__list-item">3D Art</li>
+                                    <li class="c-careers__list-item">Concept Art</li>
+                                    <li class="c-careers__list-item">UI/UX Design</li>
+                                    <li class="c-careers__list-item">Animation</li>
+                                </ul>
+                            </div>
+
+                            <button class="c-careers__btn c-btn-scndry">Apply now</button>
+                        </a>
+                    </div>
+
+                    <div class="col-6 col-md-4 col-xl-3" data-aos="fade-up" data-aos-duration="750">
+                        <a class="c-careers__card" href="contact.html?reason=developer">
+                            <div class="c-careers__txt-cntnr">
+                                <h3 class="c-careers__ttl">Developers</h3>
+                                <ul class="c-careers__list">
+                                    <li class="c-careers__list-item">Development</li>
+                                    <li class="c-careers__list-item">Programming</li>
+                                    <li class="c-careers__list-item">Design</li>
+                                    <li class="c-careers__list-item">Testing</li>
+                                    <li class="c-careers__list-item">Publishing</li>
+                                </ul>
+                            </div>
+
+                            <button class="c-careers__btn c-btn-scndry">Apply now</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <article class="c-project" id="project">
+            <div class="container">
+                <div class="c-project__row row">
+                    <div class="col-12">
+                        <header class="c-project__hdr">
+                            <h2 class="c-project__hdng">Our Project</h2>
+                            <div class="c-project__slide-btns js-slide-btns" data-steps="0">
+                                <div class="c-project__slide-btn c-project__slide-btn--dsbld js-slide-btn" data-flow="prev" data-to="0">
+                                    <svg class="c-project__slide-btn-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0"/>
+                                    </svg>
+                                </div>
+
+                                <div class="c-project__slide-btn js-slide-btn" data-flow="next" data-to="1">
+                                    <svg class="c-project__slide-btn-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </header>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="c-project__slide-cntnr js-slide-cntnr" data-aos="fade-left" data-aos-duration="750">
+                            <div class="c-project__slide js-slide">
+                                <!-- DYNAMIC - Slide items -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="offset-md-1 offset-xl-2 col-md-10 col-xl-8">
+                        <div class="c-project__txt-cntnr">
+                            <p class="c-project__prgrph">Meet DroneTanks – our very first project!
+                                A promising game with a creative twist, designed to give players a whole new experience. Are you ready to survive hordes of enemy drones?</p>
+                            <a class="c-project__btn c-btn-prmry" href="https://dronetanks.com/index.html" target="_blank">
+                                Learn more
+                                <svg class="c-btn-prmry__svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <article class="c-nwslttr">
+            <div class="c-nwslttr__cntnr container">
+                <div class="c-nwslttr__row row">
+                    <div class="col-md-6 col-xl-5">
+                        <div class="c-nwslttr__form-cntnr js-form-cntnr" data-aos="fade-right" data-aos-duration="750" data-aos-delay="150">
+                            <header class="c-nwslttr__hdr">
+                                <h2 class="c-nwslttr__hdng">Subscribe to our newsletter</h2>
+                                <p class="c-nwslttr__prgrph">Get the latest news and updates from us.</p>
+                            </header>
+                            <form class="c-nwslttr__form" id="nwslttr-form" action="https://script.google.com/macros/s/AKfycbwLdg_9UQNX92FeHWpUKE5m2AAhUvLKJo2OZHk-HZgk3yC9_sms_cEvxBjwQTqQYcKX/exec" method="post">
+
+                                <input class="c-nwslttr__form-inpt" type="email" name="email" placeholder="Your email address" required>
+                                <button class="c-nwslttr__form-btn c-btn-prmry" type="submit">Subscribe</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer class="c-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="c-footer__cntnt">
+                        <div class="c-footer__top">
+                            <div class="c-footer__logo-cntnr">
+                                <a class="c-footer__logo" href="#">
+                                    <img class="c-footer__logo-img" src="./images/icons/logo-head.webp" alt="">
+                                </a>
+                            </div>
+                            <div class="c-footer__list">
+                                <a href="contact.html" class="c-footer__list-item">Contact</a>
+                                <a href="#about" class="c-footer__list-item">About Us</a>
+                                <a href="#project" class="c-footer__list-item">Project</a>
+                                <a href="#careers" class="c-footer__list-item">Careers</a>
+                            </div>
+                            <div class="c-footer__dscrd-cntnr">
+                                <a class="c-footer__dscrd" href="https://discord.com/invite/tawYHxJWE3" target="_blank">
+                                    <svg class="c-footer__dscrd-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                                        <path d="M13.545 2.907a13.2 13.2 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.2 12.2 0 0 0-3.658 0 8 8 0 0 0-.412-.833.05.05 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.04.04 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032q.003.022.021.037a13.3 13.3 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019q.463-.63.818-1.329a.05.05 0 0 0-.01-.059l-.018-.011a9 9 0 0 1-1.248-.595.05.05 0 0 1-.02-.066l.015-.019q.127-.095.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.05.05 0 0 1 .053.007q.121.1.248.195a.05.05 0 0 1-.004.085 8 8 0 0 1-1.249.594.05.05 0 0 0-.03.03.05.05 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.2 13.2 0 0 0 4.001-2.02.05.05 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.03.03 0 0 0-.02-.019m-8.198 7.307c-.789 0-1.438-.724-1.438-1.612s.637-1.613 1.438-1.613c.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612m5.316 0c-.788 0-1.438-.724-1.438-1.612s.637-1.613 1.438-1.613c.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612"/>
+                                    </svg>
+                                    <p class="c-footer__dscrd-txt">Join the discord</p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="c-footer__bttm">
+                            <ul class="c-footer__cntct-list">
+                                <li class="c-footer__cntct-item">
+                                    <i class="bi bi-envelope-fill"></i>
+                                    <a class="c-footer__cntct-item" href="mailto:hW3yK@example.com">hW3yK@example.com</a>
+                                </li>
+                                <li class="c-footer__cntct-item">
+                                    <i class="bi bi-telephone-fill"></i>
+                                    <a class="c-footer__cntct-item" href="tel:+123456789">+123456789</a>
+                                </li>
+                            </ul>
+
+                            <div class="c-footer__scls">
+                                <h4>Follow us</h4>
+                                <div class="c-footer__scls-list">
+                                    <a class="c-footer__scls-item" href="https://www.facebook.com/" target="_blank">
+                                        <i class="bi bi-facebook"></i></i>
+                                    </a>
+                                    <a class="c-footer__scls-item" href="https://www.instagram.com/" target="_blank">
+                                        <i class="bi bi-instagram"></i>
+                                    </a>
+                                    <a class="c-footer__scls-item" href="https://www.linkedin.com/" target="_blank">
+                                        <i class="bi bi-linkedin"></i>
+                                    </a>
+                                    <a class="c-footer__scls-item" href="https://www.twitter.com/" target="_blank">
+                                        <i class="bi bi-twitter"></i>
+                                    </a>
+                                    <a class="c-footer__scls-item" href="https://www.youtube.com/" target="_blank">
+                                        <i class="bi bi-youtube"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init();</script>
+</body>
+</html>
