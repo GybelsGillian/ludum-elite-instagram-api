@@ -8,7 +8,8 @@ app.use(cors());
 const PORT = process.env.PORT || 3000;
 
 const INSTAGRAM_USER_ID = '17841471644257761';
-const ACCESS_TOKEN = 'EAAQ7E2Nx5YQBOygtOz7o7S5JAGwZCxXkuEQOye0xZBxfX0vvOL8TMxwKvnOB4Jn6VsdcVBeZA53XC9wm1xzhIdcnYqwZBEfLXxf62IQDNStSKw529Ob4zHMwsuUg36MeI76BlkOifgFHv8pssrB5I3NZCyiWVJiAxnATGZCCicInUjlbXJgN4sYqr1L9wxnF7p4XbkpxA5R82UuXXruQZDZD';
+const ACCESS_TOKEN = `EAAQ7E2Nx5YQBO7Dk7SCPVK7frW4v6cVH6IYDwj4k1X6e3IoFwoukgcA0IaDZBxf94aaqPgpbmZCO0ZBnKOqNJvQUIQ4jGnPiVOPH7eHrvoicqkzHUSpTg8u0BT8XstMbREKOZA3IpMhiwXREbB61nygSMTXbj8ZA6XBeeKBzifMEkb6Bs5L9NlDZA3
+`;
 const CACHE_FILE = 'instagram-cache.json';
 
 app.get('/instagram', async (req, res) => {

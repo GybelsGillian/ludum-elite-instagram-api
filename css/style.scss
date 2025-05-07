@@ -1625,25 +1625,92 @@ ul {
         @include font-h2();
     }
 
-    &__list {
+    // Instagram
+
+    &__insta-list {
         display: flex;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
         gap: 1.5rem;
+        clip-path: inset(-1rem -1.5rem -1rem -1.5rem);
     }
 
-    &__item {
-        width: 20rem;
-        height: 20rem;
+    &__insta-item {
+        position: relative;
+        width: 16rem;
+        min-width: 16rem;
+        height: auto;
         border-radius: $border-rds-l;
         background-color: $color-brightmarbell-neutral;
         box-shadow: $drop-shadow-btn;
+        overflow: hidden;
+        text-decoration: none;
+        color: inherit;
+        box-shadow: $drop-shadow-3d-l;
     }
 
-    &__item-img {
+    &__insta-hdr {
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        padding: .5rem;
+    }
+
+    &__insta-avtr-cntnr {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+        overflow: hidden;
+        padding: .25rem;
+        background: linear-gradient(135deg, #f09433 0%, #e6683c 70%, #dc2743 80%, #cc2366 90%, #bc1888 100%);
+
+    }
+
+    &__insta-avtr {
         width: 100%;
         height: 100%;
         object-fit: cover;
-        border-radius: $border-rds-l;
+        border-radius: 50%;
+    }
+
+    &__insta-hdng {
+        margin: 0;
+        text-decoration: none;
+        font-size: 1rem;
+        text-shadow: 0px 0px 2px rgba(0, 0, 0, .5);
+    }
+
+    &__insta-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__insta-vid {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__insta-dtls {
+        position: absolute;
+        z-index: 1;
+        bottom: 0;
+        left: 0;
+        padding: .5rem;
+        background-color: $color-brightmarbell-neutral;
+        color: $color-black-neutral;
+    }
+
+    &__insta-dtls-hdng {
+        margin: 0;
+        font-size: 1rem;
     }
 }
 
