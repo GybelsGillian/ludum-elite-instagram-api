@@ -1,5 +1,7 @@
 // #region ***  Global variables                         ***********
 
+let map;
+
 // #endregion
 
 // #region ***  DOM references                           ***********
@@ -40,6 +42,24 @@ const showModal = () => {
     listenToCloseModal();
 }
 
+const showMap = (lat, lng) => {
+    mapboxgl.accessToken = 'pk.eyJ1IjoiZ2lsbGlhbmd5YmVscyIsImEiOiJjbThtdWQ2aXowNmhoMmxzZzZlYm1scXJ5In0.CJvX-uon39LJfFpxWGRYpg';
+    map = new mapboxgl.Map({
+      container: 'js-map',
+      style: 'mapbox://styles/gilliangybels/cmaeiik9500rd01qyhi828rdq',
+      center: [lng, lat],
+      zoom: 4,
+    });
+
+    // Map width debug layout
+
+    map.once('load', () => {
+        map.resize();
+    });
+
+    // createMarker(lng, lat)
+};
+
 // #endregion
 
 // #region ***  Callback-No Visualisation - callback___  ***********
@@ -62,8 +82,6 @@ const getReason = () => {
             } else {
                 valid = false;
             }
-
-            
         }
 
     } else {
@@ -204,6 +222,7 @@ const initContact = () => {
     listenToClickFields();
     getFormSuccess();
     listenToAttchment();
+    // showMap(50.8503, 4.3517);
 }
 
 document.addEventListener('DOMContentLoaded', initContact);

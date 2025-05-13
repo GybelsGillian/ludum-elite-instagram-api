@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ludum Elite - Contact</title>
-
+    <link rel="shortcut icon" href="./images/icons/favicon.ico" type="image/x-icon">
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,16 +15,30 @@
                 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://api.mapbox.com/mapbox-gl-js/v3.10.0/mapbox-gl.css" rel="stylesheet">
+    <script src='https://api.mapbox.com/mapbox-gl-js/v3.10.0/mapbox-gl.js'></script>
+
     <link rel="stylesheet" href="css/style.css">
     
-
+    <script src="scripts/btt.js"></script>
     <script src="scripts/contact.js"></script>
     <script src="scripts/instagram.js"></script>
+    <script src="scripts/newsletter.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
       
 </head>
 <body>
+    <!-- Absolute items -->
+
+    <div class="c-btt js-btt">
+        <a class="c-btt__link" href="#top">
+            <svg class="c-btt__svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M8 10a.5.5 0 0 0 .5-.5V3.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 3.707V9.5a.5.5 0 0 0 .5.5m-7 2.5a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13a.5.5 0 0 1-.5-.5"/>
+            </svg>
+        </a>
+    </div>
+
     <div class="c-modal js-modal">
         <div class="container">
             <div class="row">
@@ -48,38 +62,27 @@
         </div>
     </div>
 
+    <div class="c-popup-mssg js-popup-mssg">
+        <!-- DYNAMIC - Popup message -->
+    </div>
+
+    <!-- End absolute items -->
+
     <header class="c-header c-header--cntct">
-        <nav class="c-nav c-nav--trnsprnt navbar navbar-expand-lg">
+        <nav class="c-nav c-nav--cntct navbar navbar-expand-lg">
             <div class="c-nav__cntnt container">
                 <a class="c-nav__brand navbar-brand" href="index.html">
                     <img class="c-nav__brand-img" src="./images/icons/logo-head.webp" alt="">
-
-                    <!-- <svg class="c-nav__brand-svg" id="Layer_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 272.5 261.4">
-                        <path class="c-nav__brand-path" d="M14.9,1.1c0-.1-.2-.2-.3,0-2.3,6.2-21.7,61.8,13,96.4,36.8,36.8,47.6,43.1,54.4,50.9h-25.9c-.3,0-.4.4-.2.6,4.3,3.1,24.3,17.6,34,26.2.5.5,1.2.7,2,.7h38.7c.6,0,1-.5.9-1.1-16.3-49.5-42.6-56-86.9-100.4C31.2,60.1,18.3,46.4,14.9,1.1Z"/>
-                        <path class="c-nav__brand-path" d="M3.9,97.9c-3.4,25.2-15,77.3,52.4,103,5.4,2.1,10.3,5.1,14.6,9,14.7,13.2,42.3,39.2,53.4,50.2s.8,0,.7-.4c-4.2-10.8-27.2-67-50-75.1-22.2-8-27.9-6.4-36.5-14.2s-3.7-5.1-3.7-8.3v-32.7c0-.4-.2-.8-.5-1-3-2-17.8-12.5-28.2-30.9s-2.1-.7-2.2.4Z"/>
-                        <path class="c-nav__brand-path" d="M257.6,1.3c0-.1.2-.2.3,0,2.3,6.2,21.7,61.8-13,96.4-36.8,36.8-47.6,43.1-54.4,50.9h25.9c.3,0,.4.4.2.6-4.3,3.1-24.3,17.6-34,26.2-.5.5-1.2.7-2,.7h-38.7c-.6,0-1-.5-.9-1.1,16.3-49.5,42.6-56,86.9-100.4,13.4-14.3,26.2-28.1,29.6-73.3Z"/>
-                        <path class="c-nav__brand-path" d="M268.6,98c3.4,25.2,15,77.3-52.4,103-5.4,2.1-10.3,5.1-14.6,9-14.7,13.2-42.3,39.2-53.4,50.2-.3.3-.8,0-.7-.4,4.2-10.8,27.2-67,50-75.1,22.2-8,27.9-6.4,36.5-14.2,2.3-2.1,3.7-5.1,3.7-8.3v-32.7c0-.4.2-.8.5-1,3-2,17.8-12.5,28.2-30.9.6-1,2.1-.7,2.2.4Z"/>
-                        <path class="c-nav__brand-path" d="M134.6,188.7h-19c-1.2,0-2,1.4-1.2,2.4,4.7,6.6,17.6,24.9,19.9,31.8.1.3.6.3.7,0,2.3-6.9,15.2-25.2,19.9-31.8s0-2.4-1.2-2.4h-19Z"/>
-                        <path class="c-nav__brand-path" d="M210.4,55.9c-3.5-2.3-31.4-22.2-75.8-21.9-44.4-.3-72.3,19.6-75.8,21.9-1.7,1.1-.9,4,0,4.9,1.5,1.4,23,18.2,39.8,29.9,35.4,24.8,28.7,30,34.8,34,.6.4.9.4,1.2.4s.6,0,1.2-.4c6.1-4-.6-9.2,34.8-34,16.8-11.8,38.3-28.5,39.8-29.9.9-.9,1.7-3.8,0-4.9Z"/>
-                        <path class="c-nav__brand-path" d="M134.6,125c0,0,.1,0,.2,0"/>
-                   
-                        <path class="c-nav__brand-path" d="M82,148.4h-25.9c-.3,0-.4.4-.2.6,4.3,3.1,24.3,17.6,34,26.2.5.5,1.2.7,2,.7h38.7c.6,0,1-.5.9-1.1-16.3-49.5-42.6-56-86.9-100.4C31.2,60.1,18.3,46.4,14.9,1.1c0-.1-.2-.2-.3,0-2.3,6.2-21.7,61.8,13,96.4,36.8,36.8,47.6,43.1,54.4,50.9Z"/>
-                        <path class="c-nav__brand-path" d="M75.1,184.5c-22.2-8-27.9-6.4-36.5-14.2-2.3-2.1-3.7-5.1-3.7-8.3v-32.7c0-.4-.2-.8-.5-1-3-2-17.8-12.5-28.2-30.9-.6-1-2.1-.7-2.2.4-3.4,25.2-15,77.3,52.4,103,5.4,2.1,10.3,5.1,14.6,9,14.7,13.2,42.3,39.2,53.4,50.2.3.3.8,0,.7-.4-4.2-10.8-27.2-67-50-75.1Z"/>
-                        <path class="c-nav__brand-path" d="M141.1,175c-.1.6.3,1.1.9,1.1h38.7c.7,0,1.4-.3,2-.7,9.7-8.6,29.7-23.1,34-26.2.3-.2.1-.6-.2-.6h-25.9c6.8-7.8,17.6-14.1,54.4-50.9,34.7-34.7,15.3-90.2,13-96.4,0-.1-.3-.1-.3,0-3.4,45.2-16.3,59-29.6,73.3-44.3,44.3-70.6,50.9-86.9,100.4Z"/>
-                        <path class="c-nav__brand-path" d="M268.6,98c-.2-1.1-1.6-1.4-2.2-.4-10.4,18.4-25.2,28.9-28.2,30.9-.3.2-.5.6-.5,1v32.7c0,3.2-1.4,6.2-3.7,8.3-8.6,7.8-14.3,6.3-36.5,14.2-22.8,8.1-45.7,64.3-50,75.1-.2.4.4.7.7.4,11.2-11,38.8-37,53.4-50.2,4.3-3.9,9.2-7,14.6-9,67.4-25.8,55.8-77.8,52.4-103Z"/>
-                        <path class="c-nav__brand-path" d="M153.6,188.7h-38c-1.2,0-2,1.4-1.2,2.4,4.7,6.6,17.6,24.9,19.9,31.8.1.3.6.3.7,0,2.3-6.9,15.2-25.2,19.9-31.8.7-1,0-2.4-1.2-2.4Z"/>
-                        <path class="c-nav__brand-path" d="M98.6,90.7c35.4,24.8,28.7,30,34.8,34,.6.4.9.4,1.2.4s.1,0,.2,0c0,0-.1,0-.2,0,.3,0,.6,0,1.2-.4,6.1-4-.6-9.2,34.8-34,16.8-11.8,38.3-28.5,39.8-29.9.9-.9,1.7-3.8,0-4.9-3.5-2.3-31.4-22.2-75.8-21.9-44.4-.3-72.3,19.6-75.8,21.9-1.7,1.1-.9,4,0,4.9,1.5,1.4,23,18.2,39.8,29.9Z"/>
-                    </svg> -->
                 </a>
                 <button class="c-nav__toggle navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="c-nav__toggle-icon navbar-toggler-icon"></span>
                 </button>
                 <div class="c-nav__collapse collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="c-nav__list navbar-nav">
-                        <a class="c-nav__link nav-link" href="index.html#about">About Us</a>
-                        <a class="c-nav__link nav-link" href="index.html#careers">Careers</a>
-                        <a class="c-nav__link nav-link" href="index.html#project">Project</a>
-                        <a class="c-nav__link nav-link" href="contact.html">Contact</a>
+                        <a class="c-nav__link c-nav__link--light nav-link" href="index.html#about">About Us</a>
+                        <a class="c-nav__link c-nav__link--light nav-link" href="index.html#careers">Careers</a>
+                        <a class="c-nav__link c-nav__link--light nav-link" href="index.html#project">Project</a>
+                        <a class="c-nav__link c-nav__link--light c-nav__link--active nav-link" href="#contact">Contact</a>
                     </div>
                 </div>
             </div>
@@ -87,38 +90,54 @@
 
         <div class="c-header__vid-cntnr">
             <video class="c-header__vid-plyr" autoplay loop muted playsinline>
-                <source src="./images/videos/dronetanks-trailer-pitch.mp4" type="video/mp4">
+                <source class="c-header__vid-src" src="./images/videos/dronetanks-trailer-pitch.mp4" type="video/mp4">
             </video>
+
+            <div class="c-header__vid-txt">
+                <div class="c-header__vid-txt-cntnr container" data-aos="fade" data-aos-duration="1000" data-aos-delay="300">
+                    <div class="row">
+                        <div class="col-12">
+                            <p class="c-header__subhdng">Ludum Elite</p>
+                            <h1 class="c-header__hdng">Contact Us</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </header>
 
     <main>
-        <article class="c-cntct">
+        <article class="c-cntct" id="contact">
             <div class="container">
-                <div class="row">
+                <div class="c-cntct__row row">
                     <div class="col-12">
                         <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
                         <form class="c-cntct__form js-form" action="https://formsubmit.co/gillian.gybels@gmail.com" method="POST" enctype="multipart/form-data" target="hidden_iframe">
                             <header class="c-cntct__form-hdr">
-                                <h2 class="c-cntct__form-hdng">Contact Us</h2>
+                                <h2 class="c-cntct__form-hdng">Contact Form</h2>
                                 <p class="c-cntct__form-subhdng">You are more than welcome to contact us and we look forward to work with you! If you have any questions or feedback, please feel free to reach out to us.</p>
-                                <div class="c-cntct__form-tip">* indicates required</div>
-                                <img class="c-cntct__form-logo" src="./images/icons/logo.webp" alt="">
-                                <ul class="c-cntct__form-cntct-lst">
-                                    <li class="c-cntct__form-cntct-itm">
-                                        <i class="bi bi-geo-alt"></i>
-                                        <p class="c-cntct__form-cntct-itm-ttl">Address</p>
-                                    </li>
-                                    <li class="c-cntct__form-cntct-itm">
-                                        <i class="bi bi-telephone"></i>
-                                        <p class="c-cntct__form-cntct-itm-ttl">Phone</p>
-                                    </li>
-                                    <li class="c-cntct__form-cntct-itm">
-                                        <i class="bi bi-envelope"></i>
-                                        <p class="c-cntct__form-cntct-itm-ttl">Email</p>
-                                    </li>
-                                </ul>
-                                <div class="c-cntct__form-map"></div>
+                                <!-- <div class="c-cntct__form-tip">* indicates required</div> -->
+                                <div class="c-cntct__form-dtls">
+                                    <ul class="c-cntct__form-cntct-lst">
+                                        <li class="c-cntct__form-cntct-itm">
+                                            <i class="c-cntct__form-cntct-itm-icn bi-geo-alt-fill"></i>
+                                            <p class="c-cntct__form-cntct-itm-ttl">Loddershoek 20, 1750 Lennik</p>
+                                        </li>
+                                        <li class="c-cntct__form-cntct-itm">
+                                            <i class="c-cntct__form-cntct-itm-icn bi-buildings-fill"></i>
+                                            <p class="c-cntct__form-cntct-itm-ttl">game.brussels SPACE</p>
+                                        </li>
+                                        <li class="c-cntct__form-cntct-itm">
+                                            <i class="c-cntct__form-cntct-itm-icn bi-telephone-fill"></i>
+                                            <p class="c-cntct__form-cntct-itm-ttl">+32 479 13 08 77</p>
+                                        </li>
+                                        <li class="c-cntct__form-cntct-itm">
+                                            <i class="c-cntct__form-cntct-itm-icn bi-envelope-fill"></i>
+                                            <p class="c-cntct__form-cntct-itm-ttl">contact@ludumelite.com</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="c-cntct__form-map" id="js-map"></div>
                             </header>
                             <div class="c-cntct__form-inpt-cntnr">
                                 <div class="c-cntct__form-grp js-form-grp" data-form-type="name">
@@ -142,7 +161,7 @@
                                     </label>
                                     <select name="subject" class="c-cntct__form-slct c-cntct__form-slct--empty js-form-slct js-form-field" id="subject" required>
                                         <option class="c-cntct__form-optn c-cntct__form-optn--grey js-form-optn" value="" data-reason="">--- Select a reason ---</option>
-                                        <option class="c-cntct__form-optn js-form-optn" value="developer" data-reason="developer">Developer</option>
+                                        <option class="c-cntct__form-optn js-form-optn" value="teamplayer" data-reason="teamplayer">Team Player</option>
                                         <option class="c-cntct__form-optn js-form-optn" value="designer" data-reason="designer">Designer</option>
                                         <option class="c-cntct__form-optn js-form-optn" value="artist" data-reason="artist">Artist</option>
                                         <option class="c-cntct__form-optn js-form-optn" value="programmer" data-reason="programmer">Programmer</option>
@@ -187,15 +206,64 @@
                 <div class="container">
                     <div class="c-scls__row row">
                         <div class="col-12">
-                            <div class="c-scls__cntnt">
-                                <h2 class="c-scls__hdng">Follow Us</h2>
-                                <p>Follow us on social media to stay up to date with our latest news.</p>
-                            </div>
+                            <header class="c-scls__hdr">
+                                <h2 class="c-scls__hdng">#Follow Our Gram</h2>
+                                <div class="c-scls__slide-btns js-slide-btns-insta" data-steps="0">
+                                    <div class="c-scls__slide-btn c-scls__slide-btn--dsbld js-slide-btn-insta" data-flow="prev" data-to="0">
+                                        <svg class="c-scls__slide-btn-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0"/>
+                                        </svg>
+                                    </div>
+    
+                                    <div class="c-scls__slide-btn js-slide-btn-insta" data-flow="next" data-to="1">
+                                        <svg class="c-scls__slide-btn-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </header>
                         </div>
 
                         <div class="col-12">
                             <div class="c-scls__insta-list js-instagram-posts">
+                                <!-- DYNAMIC - Instagram posts -->
+                                <div class="c-scls__ph-cntnr">
+                                    <span class="c-scls__ph-loader c-loader"></span>
+                                    <p>Loading the grams... 🤳✨</p>
+                                </div>
+                            </div>
+                        </div>
 
+                        <div class="col-12">
+                            <div class="c-scls__scl-cntnr">
+                                <h3 class="c-scls__scl-hdng">Or follow us on other platforms</h3>
+                                <ul class="c-scls__scl-lst">
+                                    <li class="c-scls__scl-itm">
+                                        <a class="c-scls__scl-link" href="https://www.facebook.com/">
+                                            <i class="c-scls__scl-icon bi bi-facebook"></i>
+                                        </a>
+                                    </li>
+                                    <li class="c-scls__scl-itm">
+                                        <a class="c-scls__scl-link" href="https://www.instagram.com/">
+                                            <i class="c-scls__scl-icon bi bi-instagram"></i>
+                                        </a>
+                                    </li>
+                                    <li class="c-scls__scl-itm">
+                                        <a class="c-scls__scl-link" href="https://www.linkedin.com/">
+                                            <i class="c-scls__scl-icon bi bi-linkedin"></i>
+                                        </a>
+                                    </li>
+                                    <li class="c-scls__scl-itm">
+                                        <a class="c-scls__scl-link" href="https://www.twitter.com/">
+                                            <i class="c-scls__scl-icon bi bi-twitter"></i>
+                                        </a>
+                                    </li>
+                                    <li class="c-scls__scl-itm">
+                                        <a class="c-scls__scl-link" href="https://www.youtube.com/">
+                                            <i class="c-scls__scl-icon bi bi-youtube"></i>
+                                        </a>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -206,10 +274,12 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-12">
-                            <div class="c-dscrd__cntnt" data-aos="fade-right">
-                                <h3 class="c-dscrd__hdng">Join the Discord</h3>
-                                <p>Join our Discord server and stay up to date with all the latest news and updates.</p>
-                                <a href="#" class="c-dscrd__btn c-btn-prmry">Join Discord<i class="bi bi-discord"></i></a>
+                            <div class="c-dscrd__wrppr">
+                                <div class="c-dscrd__cntnt">
+                                    <h3 class="c-dscrd__hdng">Join the Discord</h3>
+                                    <p>Join our Discord server and stay up to date with all the latest news and updates.</p>
+                                    <a href="#" class="c-dscrd__btn c-btn-prmry">Join Discord<i class="bi bi-discord"></i></a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -219,44 +289,131 @@
 
         <article class="c-faq">
             <div class="container">
-                <div class="row">
+                <div class="c-faq__row row">
                     <div class="col-12">
                         <h2 class="c-faq__hdng">FAQ</h2>
                     </div>
                     <div class="col-12">
-                        <div class="accordion accordion-flush" id="accordionFlushExample">
+                        <div class="c-faq__accrdn-list accordion accordion-flush" id="accordionFlushExample">
                             <!-- Start list -->
-                            <div class="accordion-item">
-                              <h2 class="accordion-header">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                                  Accordion Item #1
-                                </button>
-                              </h2>
-                              <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                                <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item’s accordion body.</div>
-                              </div>
+                            <div class="c-faq__accrdn-item accordion-item">
+                                <h2 class="c-faq__accrdn-hdng accordion-header">
+                                    <button class="c-faq__accrdn-btn accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                        <span class="c-faq__accrdn-btn-txt">
+                                            <i class="c-faq__accrdn-arrw bi-caret-right-fill"></i>
+                                            Can I join the team?
+                                        </span>
+                                        <i class="c-faq__accrdn-chvrn bi-chevron-down"></i>
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseOne" class="c-faq__accrdn-cllps accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                    <div class="c-faq__accrdn-body accordion-body">
+                                        Yes! We welcome anyone with basic knowledge in game development. DroneTanks is designed to offer a balance of creative freedom and structured development, making it an excellent opportunity for aspiring and experienced developers alike
+                                    </div>
+                                </div>
                             </div>
 
-                            <div class="accordion-item">
-                              <h2 class="accordion-header">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                                  Accordion Item #2
-                                </button>
-                              </h2>
-                              <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                                <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item’s accordion body. Let’s imagine this being filled with some actual content.</div>
-                              </div>
+                            <div class="c-faq__accrdn-item accordion-item">
+                                <h2 class="c-faq__accrdn-hdng accordion-header">
+                                    <button class="c-faq__accrdn-btn accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                        <span class="c-faq__accrdn-btn-txt">
+                                            <i class="c-faq__accrdn-arrw bi-caret-right-fill"></i>
+                                            What skills are required?
+                                        </span>
+                                        <i class="c-faq__accrdn-chvrn bi-chevron-down"></i>
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseTwo" class="c-faq__accrdn-cllps accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                    <div class="c-faq__accrdn-body accordion-body">
+                                        We’re looking for young and professional talents with skills in 3D modeling or digital art, and gameplay programming or multiplayer server development. That said, it can go beyond these areas, so don’t hesitate to reach out if you have other skills to offer, we’d love to hear from you!
+                                    </div>
+                                </div>
                             </div>
 
-                            <div class="accordion-item">
-                              <h2 class="accordion-header">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                                  Accordion Item #3
-                                </button>
-                              </h2>
-                              <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                                <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item’s accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
-                              </div>
+                            <div class="c-faq__accrdn-item accordion-item">
+                                <h2 class="c-faq__accrdn-hdng accordion-header">
+                                    <button class="c-faq__accrdn-btn accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                                        <span class="c-faq__accrdn-btn-txt">
+                                            <i class="c-faq__accrdn-arrw bi-caret-right-fill"></i>
+                                            What is the salary?
+                                        </span>
+                                        <i class="c-faq__accrdn-chvrn bi-chevron-down"></i>
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseThree" class="c-faq__accrdn-cllps accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                    <div class="c-faq__accrdn-body accordion-body">
+                                        We’re still in the early stages of development, but we’re actively growing and excited about what’s ahead. We're currently applying for VAF prototype funding to support early contributions, and we aim to offer proper pay starting after our vertical slice, planned for early 2026.
+                                        <br><br>Our goal is to build a passionate team that believes in the project, and reward that dedication as we grow.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="c-faq__accrdn-item accordion-item">
+                                <h2 class="c-faq__accrdn-hdng accordion-header">
+                                    <button class="c-faq__accrdn-btn accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                                        <span class="c-faq__accrdn-btn-txt">
+                                            <i class="c-faq__accrdn-arrw bi-caret-right-fill"></i>
+                                            Will there be a Kickstarter campaign?
+                                        </span>
+                                        <i class="c-faq__accrdn-chvrn bi-chevron-down"></i>
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseFour" class="c-faq__accrdn-cllps accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                    <div class="c-faq__accrdn-body accordion-body">
+                                        Yes! We’re planning to launch our Kickstarter campaign in February 2026, once our team is fully in place. It will be supported by developer logs and regular community updates on our website and social media channels.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="c-faq__accrdn-item accordion-item">
+                                <h2 class="c-faq__accrdn-hdng accordion-header">
+                                    <button class="c-faq__accrdn-btn accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                                        <span class="c-faq__accrdn-btn-txt">
+                                            <i class="c-faq__accrdn-arrw bi-caret-right-fill"></i>
+                                            How can I support the DroneTanks project?
+                                        </span>
+                                        <i class="c-faq__accrdn-chvrn bi-chevron-down"></i>
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseFive" class="c-faq__accrdn-cllps accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                    <div class="c-faq__accrdn-body accordion-body">
+                                        You can support the project by joining our Discord community, sharing our social media posts, participating in our beta tests, and backing our Kickstarter campaign once it launches.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="c-faq__accrdn-item accordion-item">
+                                <h2 class="c-faq__accrdn-hdng accordion-header">
+                                    <button class="c-faq__accrdn-btn accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
+                                        <span class="c-faq__accrdn-btn-txt">
+                                            <i class="c-faq__accrdn-arrw bi-caret-right-fill"></i>
+                                            Why is diversity important to Ludum Elite?
+                                        </span>
+                                        <i class="c-faq__accrdn-chvrn bi-chevron-down"></i>
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseSix" class="c-faq__accrdn-cllps accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                    <div class="c-faq__accrdn-body accordion-body">
+                                        We believe diversity—regardless of background, identity, or personality—drives creativity and innovation, helping us create a more inclusive and engaging game for everyone.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="c-faq__accrdn-item accordion-item">
+                                <h2 class="c-faq__accrdn-hdng accordion-header">
+                                    <button class="c-faq__accrdn-btn accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSeven" aria-expanded="false" aria-controls="flush-collapseSeven">
+                                        <span class="c-faq__accrdn-btn-txt">
+                                            <i class="c-faq__accrdn-arrw bi-caret-right-fill"></i>
+                                            Something struck my mind or I need help.
+                                        </span>
+                                        <i class="c-faq__accrdn-chvrn bi-chevron-down"></i>
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseSeven" class="c-faq__accrdn-cllps accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                    <div class="c-faq__accrdn-body accordion-body">
+                                        WWe’re always happy to help! Feel free to reach out to us personally on Discord, WhatsApp, or through our contact form. We look forward to hearing from you.
+                                    </div>
+                                </div>
                             </div>
                             <!-- End list -->
                         </div>
@@ -264,6 +421,26 @@
                 </div>
             </div>
         </article>
+
+        <section class="c-nwslttr">
+            <div class="c-nwslttr__cntnr container">
+                <div class="c-nwslttr__row row">
+                    <div class="col-md-6 col-xl-5">
+                        <div class="c-nwslttr__form-cntnr js-form-cntnr" data-aos="fade-right" data-aos-duration="750">
+                            <header class="c-nwslttr__hdr">
+                                <h2 class="c-nwslttr__hdng">Subscribe to our newsletter</h2>
+                                <p class="c-nwslttr__prgrph">Get the latest news and updates from us.</p>
+                            </header>
+                            <form class="c-nwslttr__form" id="nwslttr-form" action="https://script.google.com/macros/s/AKfycbwLdg_9UQNX92FeHWpUKE5m2AAhUvLKJo2OZHk-HZgk3yC9_sms_cEvxBjwQTqQYcKX/exec" method="post">
+
+                                <input class="c-nwslttr__form-inpt js-nwslttr-input" type="email" name="email" placeholder="Your email address" required>
+                                <button class="c-nwslttr__form-btn c-btn-prmry js-nwslttr-btn" type="submit">Subscribe</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer class="c-footer">
@@ -274,14 +451,27 @@
                         <div class="c-footer__top">
                             <div class="c-footer__logo-cntnr">
                                 <a class="c-footer__logo" href="#">
-                                    <img class="c-footer__logo-img" src="./images/icons/logo-head.webp" alt="">
+                                    <img class="c-footer__logo-img d-none d-md-block" src="./images/icons/logo-head.webp" alt="Ludum Elite Logo">
+                                    <img  class="c-footer__logo-img d-block d-md-none" src="./images/icons/logo.webp" alt="Ludum Elite Logo">
                                 </a>
                             </div>
                             <div class="c-footer__list">
-                                <a href="contact.html" class="c-footer__list-item">Contact</a>
-                                <a href="#about" class="c-footer__list-item">About Us</a>
-                                <a href="#project" class="c-footer__list-item">Project</a>
-                                <a href="#careers" class="c-footer__list-item">Careers</a>
+                                <a href="contact.html" class="c-footer__list-item">
+                                    Contact
+                                    <i class="c-footer__list-item-icon bi-arrow-up-circle-fill"></i>
+                                </a>
+                                <a href="#about" class="c-footer__list-item">
+                                    About Us
+                                    <i class="c-footer__list-item-icon bi-arrow-right-square-fill"></i>
+                                </a>
+                                <a href="#project" class="c-footer__list-item">
+                                    Project
+                                    <i class="c-footer__list-item-icon bi-arrow-right-square-fill"></i>
+                                </a>
+                                <a href="#careers" class="c-footer__list-item">
+                                    Careers
+                                    <i class="c-footer__list-item-icon bi-arrow-right-square-fill"></i>
+                                </a>
                             </div>
                             <div class="c-footer__dscrd-cntnr">
                                 <a class="c-footer__dscrd" href="https://discord.com/invite/tawYHxJWE3" target="_blank">
@@ -292,44 +482,60 @@
                                 </a>
                             </div>
                         </div>
+
                         <div class="c-footer__bttm">
                             <ul class="c-footer__cntct-list">
                                 <li class="c-footer__cntct-item">
                                     <i class="bi bi-envelope-fill"></i>
-                                    <a class="c-footer__cntct-item" href="mailto:hW3yK@example.com">hW3yK@example.com</a>
+                                    <a class="c-footer__cntct-item" href="mailto:contact@ludumelite.com ">contact@ludumelite.com</a>
                                 </li>
                                 <li class="c-footer__cntct-item">
                                     <i class="bi bi-telephone-fill"></i>
-                                    <a class="c-footer__cntct-item" href="tel:+123456789">+123456789</a>
+                                    <a class="c-footer__cntct-item" href="tel:+32479130877">+32 479 13 08 77</a>
+                                </li>
+                                <li class="c-footer__cntct-item">
+                                    <i class="bi bi-geo-alt-fill"></i>
+                                    <a class="c-footer__cntct-item" href="https://maps.app.goo.gl/Y6oL95pRPBj3C7GY7" target="_blank">game.brussels SPACE</a>
                                 </li>
                             </ul>
 
                             <div class="c-footer__scls">
                                 <h4>Follow us</h4>
                                 <div class="c-footer__scls-list">
-                                    <a class="c-footer__scls-item" href="https://www.facebook.com/" target="_blank">
+                                    <a class="c-footer__scls-item" href="https://www.facebook.com/profile.php?id=61575750132692" target="_blank">
                                         <i class="bi bi-facebook"></i>
                                     </a>
-                                    <a class="c-footer__scls-item" href="https://www.instagram.com/" target="_blank">
+                                    <a class="c-footer__scls-item" href="https://www.instagram.com/dronetanks/" target="_blank">
                                         <i class="bi bi-instagram"></i>
                                     </a>
-                                    <a class="c-footer__scls-item" href="https://www.linkedin.com/" target="_blank">
-                                        <i class="bi bi-linkedin"></i>
-                                    </a>
-                                    <a class="c-footer__scls-item" href="https://www.twitter.com/" target="_blank">
-                                        <i class="bi bi-twitter"></i>
-                                    </a>
-                                    <a class="c-footer__scls-item" href="https://www.youtube.com/" target="_blank">
+                                    <a class="c-footer__scls-item" href="https://www.youtube.com/@DroneTanks" target="_blank">
                                         <i class="bi bi-youtube"></i>
                                     </a>
                                 </div>
                             </div>
+
+                            <a class="c-footer__gg" href="https://www.linkedin.com/in/gillian-gybels-950b97151/" target="_blank">
+                                <div class="c-footer__gg-cntnr">
+                                    <img class="c-footer__gg-img" src="./images/icons/partner-gg.webp" alt="">
+                                </div>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
+        <div class="c-footer__copy container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <div class="">
+                            <p class="c-footer__copy-txt">© 2025 Ludum Elite. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </footer>
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

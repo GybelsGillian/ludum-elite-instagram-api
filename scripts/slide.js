@@ -67,7 +67,6 @@ const showSlide = () => {
     }
 
     document.querySelector('.js-slide').innerHTML = output;
-    listenToSlideByTouch();
 }
 
 const showSlideEvent = (direction) => {
@@ -108,9 +107,7 @@ const getWidths = () => {
     screenWidth = window.innerWidth;
     slideCntnrWidth = slideCntnr.offsetWidth;
     slideWidth = slide.offsetWidth;
-    console.log(`slide.offsetWidth: ${slide.offsetWidth}`)
     itemWidth = (slideItem.offsetWidth === 2)? slideCntnrWidth : slideItem.offsetWidth;
-    console.log(`slideItem.offsetWidth: ${slideItem.offsetWidth}`)
     slideGap = (screenWidth <= 768)? 24 : 24;
     
     let itemWidthCount = 0;
@@ -128,13 +125,9 @@ const getWidths = () => {
     maxClicks = arrItems.length - maxItems;
     document.documentElement.style.setProperty('--slide-cntnr-width', `${slideCntnrWidth}px`);
 
-    console.log(`Steps slide: ${stepsSlide}`)
     remainingSteps = (arrItems.length) - stepsSlide
-    console.log(`Remaining steps: ${remainingSteps}`)
     remainingWidth = remainingSteps * itemWidth + (remainingSteps - 1) * slideGap;
-    console.log(`remainingWidth: ${remainingWidth}`)
-    console.log(`slideCntnrWidth: ${slideCntnrWidth}`)
-    console.log(`Itemwidth: ${itemWidth}`)
+
 
     // Buttons update
 
@@ -165,6 +158,7 @@ const getWidths = () => {
     }
 
     listentToSlide();
+    listenToSlideByTouch();
 };
 
 // #endregion

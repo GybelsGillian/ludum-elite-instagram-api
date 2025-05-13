@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ludum Elite Studio</title>
-
+    <link rel="shortcut icon" href="./images/icons/favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
@@ -18,13 +18,15 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="css/style.css">
 
-    <script src="scripts/app.js"></script>
+    <!-- <script src="scripts/app.js"></script> -->
     <script src="scripts/team.js"></script>
     <script src="scripts/slide.js"></script>
     <script src="scripts/newsletter.js"></script>
     <script src="scripts/btt.js"></script>
 </head>
 <body>
+    <!-- Absolute items -->
+
     <div class="c-btt js-btt">
         <a class="c-btt__link" href="#top">
             <svg class="c-btt__svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
@@ -32,6 +34,12 @@
             </svg>
         </a>
     </div>
+
+    <div class="c-popup-mssg js-popup-mssg">
+        <!-- DYNAMIC - Popup message -->
+    </div>
+
+    <!-- End absolute items -->
 
     <header class="c-header c-header--home">
         <nav class="c-nav c-nav--home navbar navbar-expand-lg">
@@ -80,10 +88,10 @@
                         </div>
                     </div>
 
-                    <div class="col-5">
+                    <div class="col-sm-5">
                         <div class="c-header__dt-txt-cntnr">
                             <h2 class="c-header__dt-ttle">Drone<br>Tanks</h2>
-                            <p class="c-header__dt-prgrph">Survive hordes on a creative way you have never experienced before! And battle against challenging enemies which will craft the greatest warrior out of you.</p>
+                            <p class="c-header__dt-prgrph d-none d-sm-block">Survive hordes on a creative way you have never experienced before! And battle against challenging enemies which will craft the greatest warrior out of you.</p>
                             <a class="c-header__dt-btn c-btn-prmry" href="https://dronetanks.com/index.html" target="_blank">Learn more
                                 <svg class="c-btn-prmry__svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
                                     <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
@@ -106,53 +114,50 @@
     </header>
 
     <main>
-        <article class="c-about" id="about">
+        <section class="c-about" id="about">
             <div class="container">
                 <div class="c-about__row row">
-                    <div class="col-12">
-                        <h2 class="c-about__hdng">About Us</h2>
-                    </div>
-
                     <div class="col-lg-5">
-                        <div class="c-about__ttl-cntnr">
+                        <div class="c-about__txt-cntnr">
+                            <h2 class="c-about__hdng">About Us</h2>
                             <p class="c-about__ttl">United <span class="c-about__ttl-ccnt">since 2025</span> as Ludum Elite. We are an <span class="c-about__ttl-ccnt">international team</span> - driven, and passionate about shaping the future of interactive experiences.</p>
                         </div>
                     </div>
 
                     <div class="col-lg-7">
-                        <div class="c-about__crsl-cntnr">
-                            <div class="c-about__crsl-btn js-crls-btn" data-to="" data-flow="prev">
-                                <svg class="c-about__crsl-btn-icon" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
-                                    <path class="c-about__crsl-btn-path" fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0"/>
-                                </svg>
-                            </div>
-
-                            <div class="c-about__crsl-items js-crsl-items">
-                                <div class="c-about__crsl-item c-about__crsl-item--prev js-crsl-item js-crsl-prev">
-                                    <img class="c-about__crsl-img js-crsl-img-prev" src="" alt="">
+                        <div id="carouselExampleIndicators" class="c-about__crsl carousel slide" data-aos="fade" data-aos-duration="500">
+                            
+                            <div class="c-about__crsl-innr carousel-inner">
+                                <div class="c-about__crsl-itm carousel-item active">
+                                    <img src="./images/photos/ludumelite-studio.webp" class="c-about__crsl-img d-block w-100" alt="...">
                                 </div>
-                                <div class="c-about__crsl-item c-about__crsl-item--left js-crsl-item js-crsl-left" data-item="">
-                                    <img class="c-about__crsl-img js-crsl-img-left" src="" alt="">
+                                <div class="c-about__crsl-itm carousel-item">
+                                    <img src="./images/photos/ludum-elite-ai.png" class="c-about__crsl-img d-block w-100" alt="...">
                                 </div>
-                                <div class="c-about__crsl-item c-about__crsl-item--right js-crsl-item js-crsl-right" data-item="">
-                                    <img class="c-about__crsl-img js-crsl-img-right" src="" alt="">
-                                </div>
-                                <div class="c-about__crsl-item c-about__crsl-item--next js-crsl-item js-crsl-next">
-                                    <img class="c-about__crsl-img js-crsl-img-next" src="" alt="">
+                                <div class="c-about__crsl-itm carousel-item">
+                                    <img src="./images/photos/bruno-merch.webp" class="c-about__crsl-img d-block w-100" alt="...">
                                 </div>
                             </div>
+                            <button class="c-about__crsl-btn c-about__crsl-btn--prev carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="c-about__crsl-btn c-about__crsl-btn--next carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
 
-                            <div class="c-about__crsl-btn js-crls-btn" data-to="" data-flow="next">
-                                <svg class="c-about__crsl-btn-icon" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
-                                    <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
-                                </svg>
+                            <div class="c-about__crsl-indctrs carousel-indicators">
+                                <button class="c-about__crsl-indctr c-about__crsl-indctr--active active" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" aria-current="true" aria-label="Slide 1"></button>
+                                <button class="c-about__crsl-indctr" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                <button class="c-about__crsl-indctr" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="c-partner" data-aos="fade" data-aos-duration="500">
+            <div class="c-partner">
                 <div class="container">
                     <div class="row">
                         <div class="col-12">
@@ -170,32 +175,48 @@
                     </div>
                 </div>
             </div>
-        </article>
+        </section>
 
-        <article class="c-team">
+        <section class="c-team">
             <div class="container">
-                <div class="row">
+                <div class="c-team__row row">
                     <div class="col-12">
-                        <h2 class="c-team__hdng">Meet Our Team</h2>
+                        <header class="c-team__hdr">
+                            <h2 class="c-team__hdng">Meet Our Team</h2>
+                            <div class="c-team__slide-btns js-slide-btns-team" data-steps="0">
+                                <div class="c-team__slide-btn c-team__slide-btn--dsbld js-slide-btn-team" data-flow="prev" data-to="0">
+                                    <svg class="c-team__slide-btn-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0"/>
+                                    </svg>
+                                </div>
+
+                                <div class="c-team__slide-btn c-team__slide-btn--dsbld js-slide-btn-team" data-flow="next" data-to="1">
+                                    <svg class="c-team__slide-btn-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </header>
                     </div>
-                </div>
 
-                <div class="c-team__row row js-team">
-                    <!-- DYNAMIC - Team members -->
-                </div>
+                    <div class="col-12">
+                        <div class="c-team__mmbrs-slide-wrppr js-team-cntnr" data-aos="fade-left" data-aos-duration="750">
+                            <div class="c-team__mmbrs-slide js-team">
+                                <!-- DYNAMIC - Team members -->
+                            </div>
+                        </div>
+                    </div>
 
-                <div class="row">
-                    <div class="offset-2 col-8">
+                    <div class="offset-md-1 offset-lg-2 col-md-10 col-lg-8">
                         <div class="c-team__txt-cntnr">
                             <p class="c-team__prgrph">At Ludum Elite, every individual plays a vital role — we believe that the strength of our team lies in the unique talents and contributions of each member. Are you ready to shape the future with us?</p>
-                            
                         </div>
                     </div>
                 </div>
             </div>
-        </article>
+        </section>
 
-        <article class="c-careers" id="careers">
+        <section class="c-careers" id="careers">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
@@ -211,10 +232,18 @@
 
                 <div class="c-careers__row row">
                     <div class="col-6 col-md-4 col-xl-3" data-aos="fade-up" data-aos-duration="750">
-                        <a class="c-careers__card" href="contact.html?reason=programmer">
+                        <a class="c-careers__card" href="contact.html?reason=programmer#contact">
+                            <div class="c-careers__badge">
+                                <i class="c-careers__badge-icon bi-fire"></i>
+                            </div>
+
                             <div class="c-careers__txt-cntnr">
-                                <h3 class="c-careers__ttl">Programmers</h3>
-                                <ul class="c-careers__list">
+                                <h3 class="c-careers__ttl">Programmer</h3>
+                                <img class="c-careers__img" src="./images/textures/pcture-placeholder.webp" alt="">
+                                <p class="c-careers__txt">
+                                    For passionate coders who are experienced in c++ and Unreal Engine. Or you are a passionate student willing to learn.
+                                </p>
+                                <!-- <ul class="c-careers__list">
                                     <li class="c-careers__list-item">C#</li>
                                     <li class="c-careers__list-item">Unity</li>
                                     <li class="c-careers__list-item">
@@ -223,68 +252,88 @@
                                     </li>
                                     <li class="c-careers__list-item">JavaScript</li>
                                     <li class="c-careers__list-item">Python</li>
-                                </ul>
+                                </ul> -->
                             </div>
 
-                            <button class="c-careers__btn c-btn-scndry">Apply now</button>
+                            <span class="c-careers__btn c-btn-scndry">Apply now</span>
                         </a>
                     </div>
 
                     <div class="col-6 col-md-4 col-xl-3" data-aos="fade-up" data-aos-duration="750">
-                        <a class="c-careers__card c-careers__card--dsbld" href="contact.html?reason=designer">
+                        <a class="c-careers__card" href="contact.html?reason=designer#contact">
                             <div class="c-careers__txt-cntnr">
-                                <h3 class="c-careers__ttl">Designers</h3>
-                                <ul class="c-careers__list">
+                                <h3 class="c-careers__ttl">Designer</h3>
+                                <img class="c-careers__img" src="./images/textures/pcture-placeholder.webp" alt="">
+                                <p class="c-careers__txt">
+                                    For game designers, UI/UX designers, level designers or students.
+                                </p>
+                                <!-- <ul class="c-careers__list">
                                     <li class="c-careers__list-item">Design</li>
                                     <li class="c-careers__list-item">Level Design</li>
                                     <li class="c-careers__list-item">Balancing</li>
                                     <li class="c-careers__list-item">Mechanics</li>
                                     <li class="c-careers__list-item">Prototyping</li>
-                                </ul>
+                                </ul> -->
                             </div>
 
-                            <button class="c-careers__btn c-btn-scndry c-btn-scndry--dsbld">Apply now</button>
+                            <span class="c-careers__btn c-btn-scndry">Apply now</span>
                         </a>
                     </div>
 
                     <div class="col-6 col-md-4 col-xl-3" data-aos="fade-up" data-aos-duration="750">
-                        <a class="c-careers__card" href="contact.html?reason=artist">
+                        <a class="c-careers__card" href="contact.html?reason=artist#contact">
+                            <div class="c-careers__badge">
+                                <i class="c-careers__badge-icon bi-fire"></i>
+                            </div>
+
                             <div class="c-careers__txt-cntnr">
-                                <h3 class="c-careers__ttl">Artists</h3>
-                                <ul class="c-careers__list">
+                                <h3 class="c-careers__ttl">Artist</h3>
+                                <img class="c-careers__img" src="./images/textures/pcture-placeholder.webp" alt="">
+                                <!-- <ul class="c-careers__list">
                                     <li class="c-careers__list-item">2D Art</li>
                                     <li class="c-careers__list-item">3D Art</li>
                                     <li class="c-careers__list-item">Concept Art</li>
                                     <li class="c-careers__list-item">UI/UX Design</li>
                                     <li class="c-careers__list-item">Animation</li>
-                                </ul>
+                                </ul> -->
+                                <p class="c-careers__txt">
+                                    For 3D, audio, concept, animation - artists or students.
+                                </p>
                             </div>
 
-                            <button class="c-careers__btn c-btn-scndry">Apply now</button>
+                            <span class="c-careers__btn c-btn-scndry">Apply now</span>
                         </a>
                     </div>
 
                     <div class="col-6 col-md-4 col-xl-3" data-aos="fade-up" data-aos-duration="750">
-                        <a class="c-careers__card" href="contact.html?reason=developer">
+                        <a class="c-careers__card" href="contact.html?reason=teamplayer#contact">
+                            <div class="c-careers__badge">
+                                <i class="c-careers__badge-icon bi-fire"></i>
+                            </div>
+
                             <div class="c-careers__txt-cntnr">
-                                <h3 class="c-careers__ttl">Developers</h3>
-                                <ul class="c-careers__list">
+                                <h3 class="c-careers__ttl">Team Player</h3>
+                                <img class="c-careers__img" src="./images/textures/pcture-placeholder.webp" alt="">
+                                <!-- <ul class="c-careers__list">
                                     <li class="c-careers__list-item">Development</li>
                                     <li class="c-careers__list-item">Programming</li>
                                     <li class="c-careers__list-item">Design</li>
                                     <li class="c-careers__list-item">Testing</li>
                                     <li class="c-careers__list-item">Publishing</li>
-                                </ul>
+                                </ul> -->
+                                <p class="c-careers__txt">
+                                    Influencers, social media managers, marketers, content creators, copywriters - all are welcome.
+                                </p>    
                             </div>
 
-                            <button class="c-careers__btn c-btn-scndry">Apply now</button>
+                            <span class="c-careers__btn c-btn-scndry">Apply now</span>
                         </a>
                     </div>
                 </div>
             </div>
-        </article>
+        </section>
 
-        <article class="c-project" id="project">
+        <section class="c-project" id="project">
             <div class="container">
                 <div class="c-project__row row">
                     <div class="col-12">
@@ -309,7 +358,7 @@
                     <div class="col-12">
                         <div class="c-project__slide-cntnr js-slide-cntnr" data-aos="fade-left" data-aos-duration="750">
                             <div class="c-project__slide js-slide">
-                                <!-- DYNAMIC - Slide items -->
+                                <!-- DYNAMIC - Project items -->
                             </div>
                         </div>
                     </div>
@@ -328,27 +377,27 @@
                     </div>
                 </div>
             </div>
-        </article>
+        </section>
 
-        <article class="c-nwslttr">
+        <section class="c-nwslttr">
             <div class="c-nwslttr__cntnr container">
                 <div class="c-nwslttr__row row">
                     <div class="col-md-6 col-xl-5">
-                        <div class="c-nwslttr__form-cntnr js-form-cntnr" data-aos="fade-right" data-aos-duration="750" data-aos-delay="150">
+                        <div class="c-nwslttr__form-cntnr js-form-cntnr" data-aos="fade-right" data-aos-duration="750">
                             <header class="c-nwslttr__hdr">
                                 <h2 class="c-nwslttr__hdng">Subscribe to our newsletter</h2>
                                 <p class="c-nwslttr__prgrph">Get the latest news and updates from us.</p>
                             </header>
                             <form class="c-nwslttr__form" id="nwslttr-form" action="https://script.google.com/macros/s/AKfycbwLdg_9UQNX92FeHWpUKE5m2AAhUvLKJo2OZHk-HZgk3yC9_sms_cEvxBjwQTqQYcKX/exec" method="post">
 
-                                <input class="c-nwslttr__form-inpt" type="email" name="email" placeholder="Your email address" required>
-                                <button class="c-nwslttr__form-btn c-btn-prmry" type="submit">Subscribe</button>
+                                <input class="c-nwslttr__form-inpt js-nwslttr-input" type="email" name="email" placeholder="Your email address" required>
+                                <button class="c-nwslttr__form-btn c-btn-prmry js-nwslttr-btn" type="submit">Subscribe</button>
                             </form>
                         </div>
                     </div>
                 </div>
             </div>
-        </article>
+        </section>
     </main>
 
     <footer class="c-footer">
@@ -359,14 +408,27 @@
                         <div class="c-footer__top">
                             <div class="c-footer__logo-cntnr">
                                 <a class="c-footer__logo" href="#">
-                                    <img class="c-footer__logo-img" src="./images/icons/logo-head.webp" alt="">
+                                    <img class="c-footer__logo-img d-none d-lg-block" src="./images/icons/logo-head.webp" alt="Ludum Elite Logo">
+                                    <img  class="c-footer__logo-img d-block d-lg-none" src="./images/icons/logo.webp" alt="Ludum Elite Logo">
                                 </a>
                             </div>
                             <div class="c-footer__list">
-                                <a href="contact.html" class="c-footer__list-item">Contact</a>
-                                <a href="#about" class="c-footer__list-item">About Us</a>
-                                <a href="#project" class="c-footer__list-item">Project</a>
-                                <a href="#careers" class="c-footer__list-item">Careers</a>
+                                <a href="contact.html" class="c-footer__list-item">
+                                    Contact
+                                    <i class="c-footer__list-item-icon bi-arrow-right-square-fill"></i>
+                                </a>
+                                <a href="#about" class="c-footer__list-item">
+                                    About Us
+                                    <i class="c-footer__list-item-icon bi-arrow-up-circle-fill"></i>
+                                </a>
+                                <a href="#project" class="c-footer__list-item">
+                                    Project
+                                    <i class="c-footer__list-item-icon bi-arrow-up-circle-fill"></i>
+                                </a>
+                                <a href="#careers" class="c-footer__list-item">
+                                    Careers
+                                    <i class="c-footer__list-item-icon bi-arrow-up-circle-fill"></i>
+                                </a>
                             </div>
                             <div class="c-footer__dscrd-cntnr">
                                 <a class="c-footer__dscrd" href="https://discord.com/invite/tawYHxJWE3" target="_blank">
@@ -377,39 +439,54 @@
                                 </a>
                             </div>
                         </div>
+
                         <div class="c-footer__bttm">
                             <ul class="c-footer__cntct-list">
                                 <li class="c-footer__cntct-item">
-                                    <i class="bi bi-envelope-fill"></i>
-                                    <a class="c-footer__cntct-item" href="mailto:hW3yK@example.com">hW3yK@example.com</a>
+                                    <i class="c-footer__cntct-icon bi-envelope-fill"></i>
+                                    <a class="c-footer__cntct-item" href="mailto:contact@ludumelite.com ">contact@ludumelite.com</a>
                                 </li>
                                 <li class="c-footer__cntct-item">
-                                    <i class="bi bi-telephone-fill"></i>
-                                    <a class="c-footer__cntct-item" href="tel:+123456789">+123456789</a>
+                                    <i class="c-footer__cntct-icon bi-telephone-fill"></i>
+                                    <a class="c-footer__cntct-item" href="tel:+32479130877">+32 479 13 08 77</a>
+                                </li>
+                                <li class="c-footer__cntct-item">
+                                    <i class="c-footer__cntct-icon bi-geo-alt-fill"></i>
+                                    <a class="c-footer__cntct-item" href="https://maps.app.goo.gl/Y6oL95pRPBj3C7GY7" target="_blank">game.brussels SPACE</a>
                                 </li>
                             </ul>
 
                             <div class="c-footer__scls">
                                 <h4>Follow us</h4>
                                 <div class="c-footer__scls-list">
-                                    <a class="c-footer__scls-item" href="https://www.facebook.com/" target="_blank">
-                                        <i class="bi bi-facebook"></i></i>
+                                    <a class="c-footer__scls-item" href="https://www.facebook.com/profile.php?id=61575750132692" target="_blank">
+                                        <i class="c-footer__scls-icon bi-facebook"></i>
                                     </a>
-                                    <a class="c-footer__scls-item" href="https://www.instagram.com/" target="_blank">
-                                        <i class="bi bi-instagram"></i>
+                                    <a class="c-footer__scls-item" href="https://www.instagram.com/dronetanks/" target="_blank">
+                                        <i class="c-footer__scls-icon bi-instagram"></i>
                                     </a>
-                                    <a class="c-footer__scls-item" href="https://www.linkedin.com/" target="_blank">
-                                        <i class="bi bi-linkedin"></i>
-                                    </a>
-                                    <a class="c-footer__scls-item" href="https://www.twitter.com/" target="_blank">
-                                        <i class="bi bi-twitter"></i>
-                                    </a>
-                                    <a class="c-footer__scls-item" href="https://www.youtube.com/" target="_blank">
-                                        <i class="bi bi-youtube"></i>
+                                    <a class="c-footer__scls-item" href="https://www.youtube.com/@DroneTanks" target="_blank">
+                                        <i class="c-footer__scls-icon bi-youtube"></i>
                                     </a>
                                 </div>
                             </div>
+
+                            <a class="c-footer__gg" href="https://www.linkedin.com/in/gillian-gybels-950b97151/" target="_blank">
+                                <div class="c-footer__gg-cntnr">
+                                    <img class="c-footer__gg-img" src="./images/icons/partner-gg.webp" alt="">
+                                </div>
+                            </a>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="c-footer__copy container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <div class="">
+                            <p class="c-footer__copy-txt">© 2025 Ludum Elite. All rights reserved.</p>
                     </div>
                 </div>
             </div>
